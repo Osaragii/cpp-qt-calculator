@@ -55,6 +55,25 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/lib/cmake/Qt5Gui/Qt5Gui_QXcbGlxIntegrationPlugin.cmake"
   "/usr/lib/cmake/Qt5Gui/Qt5Gui_QXcbIntegrationPlugin.cmake"
   "/usr/lib/cmake/Qt5Gui/Qt5Gui_QXdgDesktopPortalThemePlugin.cmake"
+  "/usr/lib/cmake/Qt5Network/Qt5NetworkConfig.cmake"
+  "/usr/lib/cmake/Qt5Network/Qt5NetworkConfigVersion.cmake"
+  "/usr/lib/cmake/Qt5Network/Qt5Network_QConnmanEnginePlugin.cmake"
+  "/usr/lib/cmake/Qt5Network/Qt5Network_QGenericEnginePlugin.cmake"
+  "/usr/lib/cmake/Qt5Network/Qt5Network_QNetworkManagerEnginePlugin.cmake"
+  "/usr/lib/cmake/Qt5Qml/Qt5QmlConfig.cmake"
+  "/usr/lib/cmake/Qt5Qml/Qt5QmlConfigExtras.cmake"
+  "/usr/lib/cmake/Qt5Qml/Qt5QmlConfigVersion.cmake"
+  "/usr/lib/cmake/Qt5Qml/Qt5Qml_QDebugMessageServiceFactory.cmake"
+  "/usr/lib/cmake/Qt5Qml/Qt5Qml_QLocalClientConnectionFactory.cmake"
+  "/usr/lib/cmake/Qt5Qml/Qt5Qml_QQmlDebugServerFactory.cmake"
+  "/usr/lib/cmake/Qt5Qml/Qt5Qml_QQmlDebuggerServiceFactory.cmake"
+  "/usr/lib/cmake/Qt5Qml/Qt5Qml_QQmlInspectorServiceFactory.cmake"
+  "/usr/lib/cmake/Qt5Qml/Qt5Qml_QQmlNativeDebugConnectorFactory.cmake"
+  "/usr/lib/cmake/Qt5Qml/Qt5Qml_QQmlNativeDebugServiceFactory.cmake"
+  "/usr/lib/cmake/Qt5Qml/Qt5Qml_QQmlPreviewServiceFactory.cmake"
+  "/usr/lib/cmake/Qt5Qml/Qt5Qml_QQmlProfilerServiceFactory.cmake"
+  "/usr/lib/cmake/Qt5Qml/Qt5Qml_QQuickProfilerAdapterFactory.cmake"
+  "/usr/lib/cmake/Qt5Qml/Qt5Qml_QTcpServerConnectionFactory.cmake"
   "/usr/lib/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake"
   "/usr/lib/cmake/Qt5Widgets/Qt5WidgetsConfigExtras.cmake"
   "/usr/lib/cmake/Qt5Widgets/Qt5WidgetsConfigVersion.cmake"
@@ -181,12 +200,10 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/3.31.1/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.31.1/CMakeCCompiler.cmake"
   "CMakeFiles/3.31.1/CMakeCXXCompiler.cmake"
-  "CMakeFiles/calculator_autogen.dir/AutogenInfo.json"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/calculator.dir/DependInfo.cmake"
-  "CMakeFiles/calculator_autogen.dir/DependInfo.cmake"
   )

@@ -85,6 +85,51 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+.PHONY : list_install_components/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
+
 # The main all target
 all: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/devashish/cpp-qt-calculator/build/CMakeFiles /home/devashish/cpp-qt-calculator/build//CMakeFiles/progress.marks
@@ -129,42 +174,29 @@ calculator/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/calculator.dir/build.make CMakeFiles/calculator.dir/build
 .PHONY : calculator/fast
 
-#=============================================================================
-# Target rules for targets named calculator_autogen
-
-# Build rule for target.
-calculator_autogen: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 calculator_autogen
-.PHONY : calculator_autogen
-
-# fast build rule for target.
-calculator_autogen/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/calculator_autogen.dir/build.make CMakeFiles/calculator_autogen.dir/build
-.PHONY : calculator_autogen/fast
-
-calculator_autogen/mocs_compilation.o: calculator_autogen/mocs_compilation.cpp.o
-.PHONY : calculator_autogen/mocs_compilation.o
+src/calculator.o: src/calculator.cpp.o
+.PHONY : src/calculator.o
 
 # target to build an object file
-calculator_autogen/mocs_compilation.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/calculator.dir/build.make CMakeFiles/calculator.dir/calculator_autogen/mocs_compilation.cpp.o
-.PHONY : calculator_autogen/mocs_compilation.cpp.o
+src/calculator.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calculator.dir/build.make CMakeFiles/calculator.dir/src/calculator.cpp.o
+.PHONY : src/calculator.cpp.o
 
-calculator_autogen/mocs_compilation.i: calculator_autogen/mocs_compilation.cpp.i
-.PHONY : calculator_autogen/mocs_compilation.i
+src/calculator.i: src/calculator.cpp.i
+.PHONY : src/calculator.i
 
 # target to preprocess a source file
-calculator_autogen/mocs_compilation.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/calculator.dir/build.make CMakeFiles/calculator.dir/calculator_autogen/mocs_compilation.cpp.i
-.PHONY : calculator_autogen/mocs_compilation.cpp.i
+src/calculator.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calculator.dir/build.make CMakeFiles/calculator.dir/src/calculator.cpp.i
+.PHONY : src/calculator.cpp.i
 
-calculator_autogen/mocs_compilation.s: calculator_autogen/mocs_compilation.cpp.s
-.PHONY : calculator_autogen/mocs_compilation.s
+src/calculator.s: src/calculator.cpp.s
+.PHONY : src/calculator.s
 
 # target to generate assembly for a file
-calculator_autogen/mocs_compilation.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/calculator.dir/build.make CMakeFiles/calculator.dir/calculator_autogen/mocs_compilation.cpp.s
-.PHONY : calculator_autogen/mocs_compilation.cpp.s
+src/calculator.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calculator.dir/build.make CMakeFiles/calculator.dir/src/calculator.cpp.s
+.PHONY : src/calculator.cpp.s
 
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
@@ -190,6 +222,30 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/calculator.dir/build.make CMakeFiles/calculator.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/moc_calculator.o: src/moc_calculator.cpp.o
+.PHONY : src/moc_calculator.o
+
+# target to build an object file
+src/moc_calculator.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calculator.dir/build.make CMakeFiles/calculator.dir/src/moc_calculator.cpp.o
+.PHONY : src/moc_calculator.cpp.o
+
+src/moc_calculator.i: src/moc_calculator.cpp.i
+.PHONY : src/moc_calculator.i
+
+# target to preprocess a source file
+src/moc_calculator.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calculator.dir/build.make CMakeFiles/calculator.dir/src/moc_calculator.cpp.i
+.PHONY : src/moc_calculator.cpp.i
+
+src/moc_calculator.s: src/moc_calculator.cpp.s
+.PHONY : src/moc_calculator.s
+
+# target to generate assembly for a file
+src/moc_calculator.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calculator.dir/build.make CMakeFiles/calculator.dir/src/moc_calculator.cpp.s
+.PHONY : src/moc_calculator.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -197,15 +253,21 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... install"
+	@echo "... install/local"
+	@echo "... install/strip"
+	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... calculator_autogen"
 	@echo "... calculator"
-	@echo "... calculator_autogen/mocs_compilation.o"
-	@echo "... calculator_autogen/mocs_compilation.i"
-	@echo "... calculator_autogen/mocs_compilation.s"
+	@echo "... src/calculator.o"
+	@echo "... src/calculator.i"
+	@echo "... src/calculator.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/moc_calculator.o"
+	@echo "... src/moc_calculator.i"
+	@echo "... src/moc_calculator.s"
 .PHONY : help
 
 

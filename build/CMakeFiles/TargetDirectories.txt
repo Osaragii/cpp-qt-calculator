@@ -1,4 +1,7 @@
 /home/devashish/cpp-qt-calculator/build/CMakeFiles/calculator.dir
 /home/devashish/cpp-qt-calculator/build/CMakeFiles/edit_cache.dir
 /home/devashish/cpp-qt-calculator/build/CMakeFiles/rebuild_cache.dir
-/home/devashish/cpp-qt-calculator/build/CMakeFiles/calculator_autogen.dir
+/home/devashish/cpp-qt-calculator/build/CMakeFiles/list_install_components.dir
+/home/devashish/cpp-qt-calculator/build/CMakeFiles/install.dir
+/home/devashish/cpp-qt-calculator/build/CMakeFiles/install/local.dir
+/home/devashish/cpp-qt-calculator/build/CMakeFiles/install/strip.dir

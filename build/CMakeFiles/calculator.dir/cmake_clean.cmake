@@ -1,16 +1,14 @@
 file(REMOVE_RECURSE
   "CMakeFiles/calculator.dir/link.d"
-  "CMakeFiles/calculator_autogen.dir/AutogenUsed.txt"
-  "CMakeFiles/calculator_autogen.dir/ParseCache.txt"
-  "calculator_autogen"
-  "CMakeFiles/calculator.dir/calculator_autogen/mocs_compilation.cpp.o"
-  "CMakeFiles/calculator.dir/calculator_autogen/mocs_compilation.cpp.o.d"
+  "CMakeFiles/calculator.dir/src/calculator.cpp.o"
+  "CMakeFiles/calculator.dir/src/calculator.cpp.o.d"
   "CMakeFiles/calculator.dir/src/main.cpp.o"
   "CMakeFiles/calculator.dir/src/main.cpp.o.d"
+  "CMakeFiles/calculator.dir/src/moc_calculator.cpp.o"
+  "CMakeFiles/calculator.dir/src/moc_calculator.cpp.o.d"
   "calculator"
   "calculator.pdb"
-  "calculator_autogen/mocs_compilation.cpp"
-  "calculator_autogen/timestamp"
+  "src/moc_calculator.cpp"
 )
 
 # Per-language clean rules from dependency scanning.

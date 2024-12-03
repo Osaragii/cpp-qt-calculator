@@ -18,7 +18,8 @@
           "text": "-enable-pretty-printing",
           "ignoreFailures": true
         }
-      ]
+      ],
+      "visualizerFile": "/home/devashish/.config/VSCodium/User/workspaceStorage/b581d4fd997527edea790cda4a696915/tonka3000.qtvsctools/qt.natvis.xml"
     }
   ]
 }
